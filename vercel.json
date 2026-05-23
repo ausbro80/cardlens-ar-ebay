@@ -1,7 +1,18 @@
 {
+  "version": 2,
   "functions": {
-    "api/ebay-prices.js": {
-      "maxDuration": 20
+    "api/card-search.js": {
+      "runtime": "nodejs20.x"
     }
-  }
+  },
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "/api/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/public/$1"
+    }
+  ]
 }
