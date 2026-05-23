@@ -1,0 +1,7 @@
+{
+  "functions": {
+    "api/ebay-prices.js": {
+      "maxDuration": 20
+    }
+  }
+}
