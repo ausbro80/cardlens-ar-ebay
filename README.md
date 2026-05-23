@@ -1,19 +1,42 @@
-# CardLens AR TCG Scanner
+# CardLens Glasses Auto Scan
 
-Vercel-ready prototype.
+A Vercel-ready prototype for a smart-glasses style Pokémon card scanner.
 
-## Files
+## What it does
 
-- `public/index.html`: camera UI, OCR, manual search, AR-style HUD
-- `api/card-search.js`: Pokémon TCG API proxy
+- Uses the live camera in the browser
+- Automatically scans the centered card with OCR
+- Sends OCR text to `/api/card-search`
+- Searches the Pokémon TCG API
+- Shows a small glasses-style HUD with:
+  - Card name
+  - Set
+  - Card number
+  - Rarity
+  - TCGPlayer raw market price when available
+  - PSA 9 and PSA 10 eBay search links
 
-## Optional Environment Variable
+## Vercel deploy
+
+Upload these files to GitHub, then import the repo into Vercel.
+
+Do not add `vercel.json`.
+
+## Optional environment variable
 
 `POKEMON_TCG_API_KEY`
 
-The app works without it, but the API rate limit is better with a key.
+Get it from https://dev.pokemontcg.io/
+
+The app can work without the key, but rate limits are better with it.
+
+## Files
+
+- `public/index.html`
+- `api/card-search.js`
+- `package.json`
+- `README.md`
 
 ## Notes
 
-OCR can fail when the card is blurry, reflective, or too far away.
-Use the top manual search field as the reliable shortcut.
+This is an MVP. OCR can fail under glare, blur, sleeves, or bad focus. For production, add a card-corner detector and image matching model.

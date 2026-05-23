@@ -1,9 +1,10 @@
 {
-  "name": "cardlens-ar-tcgplayer",
-  "version": "1.1.0",
+  "name": "cardlens-glasses-auto-scan",
+  "version": "1.0.0",
   "private": true,
+  "type": "module",
   "scripts": {
+    "dev": "vercel dev",
     "start": "vercel dev"
-  },
-  "dependencies": {}
+  }
 }
